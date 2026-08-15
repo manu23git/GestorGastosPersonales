@@ -1,0 +1,35 @@
+{
+  "name": "gestorgastospersonales",
+  "version": "1.0.0",
+  "description": "Gestor de gastos personales.",
+  "main": "src/servidor.js",
+  "scripts": {
+    "start": "node src/servidor.js",
+    "dev": "nodemon src/servidor.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/manu23git/GestorGastosPersonales.git"
+  },
+  "keywords": [
+    "gastos",
+    "express",
+    "mongodb",
+    "mongoose"
+  ],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/manu23git/GestorGastosPersonales/issues"
+  },
+  "homepage": "https://github.com/manu23git/GestorGastosPersonales#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "mongoose": "^9.9.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
