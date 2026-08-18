@@ -1,0 +1,141 @@
+/* ============================================================
+   PALETA DE COLORES DEL SITIO
+   Cambia cualquiera de estos valores para actualizar ese color
+   en todo el sitio a la vez.
+   ============================================================ */
+:root {
+  --color-oscuro: #031926;         /* barra superior (navbar) */
+  --color-secundario: #468189;     /* botón "Editar" */
+  --color-acento: #77aca2;         /* botón "Agregar/Guardar", pestaña activa */
+  --color-acento-oscuro: #2f5d55;  /* texto sobre fondos claros de acento */
+  --color-acento-claro: #e6f1ef;   /* fondo de las tarjetas de "Totales" */
+  --color-acento-borde: #bfdcd6;   /* borde de insignias y tarjetas de "Totales" */
+  --color-suave: #9dbebb;          /* fondo de página, foco de campos */
+
+  --bs-dark-rgb: 3, 25, 38;        /* usa --color-oscuro en la barra superior de Bootstrap */
+}
+
+/* ============================================================
+   FONDO GENERAL DE LA PÁGINA
+   ============================================================ */
+body {
+  background-color: color-mix(in srgb, var(--color-suave) 30%, white);
+}
+
+#listaGastos td {
+  vertical-align: middle;
+}
+
+/* ============================================================
+   BOTÓN "Agregar gasto" / "Guardar cambios"
+   ============================================================ */
+.btn-success {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+}
+
+.btn-success:hover,
+.btn-success:active {
+  background-color: var(--color-acento-oscuro);
+  border-color: var(--color-acento-oscuro);
+}
+
+/* ============================================================
+   PESTAÑAS "Por categoría" / "Por mes"
+   ============================================================ */
+.btn-outline-success {
+  color: var(--color-acento-oscuro);
+  border-color: var(--color-acento);
+}
+
+.btn-outline-success:hover,
+.btn-outline-success.active {
+  background-color: var(--color-acento);
+  border-color: var(--color-acento);
+  color: #ffffff;
+}
+
+/* ============================================================
+   BOTÓN "Editar"
+   ============================================================ */
+.btn-outline-primary {
+  color: var(--color-secundario);
+  border-color: var(--color-secundario);
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:active {
+  background-color: var(--color-secundario);
+  border-color: var(--color-secundario);
+  color: #ffffff;
+}
+
+/* ============================================================
+   FOCO de campos/inputs y de botones (Bootstrap lo trae en azul
+   por defecto; se reemplaza por los colores de la paleta).
+   ============================================================ */
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--color-suave);
+  box-shadow: 0 0 0 0.25rem rgba(157, 190, 187, 0.35);
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.25rem rgba(70, 129, 137, 0.5);
+}
+
+/* ============================================================
+   INSIGNIA de categoría (Comida, Transporte, etc.)
+   ============================================================ */
+.badge.text-bg-success-subtle {
+  background-color: #ffffff !important;
+}
+
+.text-success-emphasis {
+  color: var(--color-acento-oscuro) !important;
+}
+
+.border-success-subtle {
+  border-color: var(--color-acento-borde) !important;
+}
+
+/* ============================================================
+   AVISO de éxito (banner de estado y notificación toast)
+   ============================================================ */
+.alert-success {
+  color: var(--color-acento-oscuro);
+  background-color: var(--color-acento-claro);
+  border-color: var(--color-acento-borde);
+}
+
+.toast.bg-success {
+  background-color: var(--color-acento) !important;
+}
+
+/* ============================================================
+   TARJETAS de "Totales"
+   ============================================================ */
+.total-card {
+  background-color: var(--color-acento-claro);
+  border-radius: 0.5rem;
+  padding: 0.75rem 1rem;
+  height: 100%;
+}
+
+.total-card .t-label {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: capitalize;
+  margin-bottom: 2px;
+  color: var(--color-secundario);
+}
+
+.total-card .t-value {
+  font-weight: 600;
+  color: var(--color-acento-oscuro);
+}
+
+.total-card .t-count {
+  font-size: 0.75rem;
+  color: #6c757d;
+}

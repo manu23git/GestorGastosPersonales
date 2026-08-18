@@ -1,4 +1,5 @@
-require('dotenv').config()
+const path = require('path')
+require('dotenv').config({ path: path.join(__dirname, '.env') })
 
 const express = require('express')
 const conectarBaseDeDatos = require('./configuracion/baseDeDatos')
@@ -8,6 +9,7 @@ const aplicacion = express()
 const puerto = process.env.PUERTO || 3000
 
 aplicacion.use(express.json())
+aplicacion.use(express.static(path.join(__dirname, 'vistas')))
 aplicacion.use('/api/gastos', rutasGastos)
 
 const iniciarServidor = async () => {
