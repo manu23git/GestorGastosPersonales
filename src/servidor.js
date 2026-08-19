@@ -21,7 +21,7 @@ const iniciarServidor = async () => {
         })
     } catch (error) {
         console.error('No se pudo iniciar el servidor:', error.message)
-        process.exit(1)
+        process.exit(1) 
     }
 }
 
